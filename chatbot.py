@@ -35,10 +35,16 @@ def check_all_messages(message):
 
     response('Hola', ['hola', 'saludos', 'buenas'], single_response=True)
     response('Estoy bien y tu?', ['como', 'estas', 'va', 'vas', 'sientes'], required_words=['como'])
-    response('Claro'
-             'Horario:    2:00-3:40'
-             'Docente:    Hugo Espetia Huamanga'+
-             'Salon:      301',['horario','cual'],required_words=['horario','cual'])
+    response('Claro\n\n'
+             'Dia Miercoles\n'+
+             'Horario:    2:00-3:40 \n'+
+             'Docente:    Hugo Espetia Huamanga \n'+
+             'Salon:      301 \n'+
+             'Dia Jueves\n'+
+             'Horario:    2:00-5:09 \n'+
+             'Docente:    Hugo Espetia Huamanga \n'+
+             'Salon:      801 \n'
+             ,['horario','cual'],required_words=['horario'])
     response('Los examenes son en las semanas: \n'+
              'Semana:  4 ' + ' Semana:  7 \n'+
              'Semana:  8 ' + ' Semana:  12 \n'+
