@@ -37,10 +37,12 @@ def check_all_messages(message):
     response('Estoy bien y tu?', ['como', 'estas', 'va', 'vas', 'sientes'], required_words=['como'])
     response('Claro\n\n'
              'Dia Miercoles\n'+
+             'Curso:    Construcción de Software \n'+
              'Horario:    2:00-3:40 \n'+
              'Docente:    Hugo Espetia Huamanga \n'+
-             'Salon:      301 \n'+
+             'Salon:      301 \n\n'+
              'Dia Jueves\n'+
+             'Curso:    Construcción de Software \n'+
              'Horario:    2:00-5:09 \n'+
              'Docente:    Hugo Espetia Huamanga \n'+
              'Salon:      801 \n'
