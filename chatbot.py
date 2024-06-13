@@ -57,43 +57,51 @@ def check_all_messages(message):
              'Horas practicas: 2 \n',['cuantas','horas','tienes'],required_words=['horas'])
     response('Al finalizar la asignatura, el estudiante será capaz de aplicar los principios fundamentales de la construcción de software empleando metodologías y herramientas de construcción de software'
              ,['resultado','resultados','cual'],required_words=['resultado'])
-    """""
-    response('La unidad 1 tiene como ejes tematicos'+
-            '1. Minimización de la complejidad'+
-             '2. Anticipación a los cambios'+
-             '3. Construcción para verificación'+
-             '4. Reutilización'+
-             '5. Estándares en la construcción',['unidad1'],required_words=['unidad1'])
-    response('Unidad 2: Gestión de la construcción de software'+
-             '1. Modelos de construcción'
-             '2. Plan de construcción'
-             '3. Métricas de la construcción',['unidad2'],required_words=['unidad2'])
+    
+    response('La unidad 1 tiene como ejes tematicos\n'+
+            '1. Minimización de la complejidad\n'+
+             '2. Anticipación a los cambios\n'+
+             '3. Construcción para verificación\n'+
+             '4. Reutilización\n'+
+             '5. Estándares en la construcción\n',['primera','1'],required_words=['primera'])
+    response('Unidad 2: Gestión de la construcción de software\n'+
+             '1. Modelos de construcción\n'+
+             '2. Plan de construcción\n'+
+             '3. Métricas de la construcción',['eje','2'],required_words=['segunda'])
     response('Unidad 3: Prácticas de código completo y código limpio'+
-             '1. Diseño de la construcción'+
-             '2. Lenguajes de construcción'+
-             '3. Codificación'+
-             '4. Pruebas de construcción'+
-             '5. Construcción para reutilización'+
-             '6. Construcción con reutilización'+
-             '7. Calidad de construcción'+
-             '8. Integración',['unidad3'],required_words=['unidad3'])
-    response('Unidad 4: Tecnologías y Herramientas para la construcción de software'+
-             '1. Diseño y uso API'+
-             '2. Problemas de tiempo de ejecución orientado a objetos'+
-             '3. Parametrización y genéricos'+
-             '4. Afirmaciones, diseño por contrato y programación defensiva'+
-             '5. Control de errores, control de excepciones, y la tolerancia a fallos'+
-             '6. Modelos ejecutables'+
-             '7. Técnicas de construcción basadas en estados y tablas'+
-             '8. Configuración de tiempo de ejecución y la internacionalización'+
-             '9. Procesamiento de entrada basada en gramática'+
-             '10. Middleware'+
-             '11. Métodos de construcción para software distribuido'+
-             '12. Construcción de sistemas heterogéneos'+
-             '13. Entornos de desarrollo'+
-             '14. Constructores GUI'+
-             '15. Herramientas de prueba de unidad',['unidad4','cuales','ejes','tematicos'],required_words=['unidad4'])
-             """
+             '1. Diseño de la construcción\n'+
+             '2. Lenguajes de construcción\n'+
+             '3. Codificación\n'+
+             '4. Pruebas de construcción\n'+
+             '5. Construcción para reutilización\n'+
+             '6. Construcción con reutilización\n'+
+             '7. Calidad de construcción\n'+
+             '8. Integración',['temas','3'],required_words=['tercera'])
+    response('Unidad 4: Tecnologías y Herramientas para la construcción de software\n'+
+             '1. Diseño y uso API\n'+
+             '2. Problemas de tiempo de ejecución orientado a objetos\n'+
+             '3. Parametrización y genéricos\n'+
+             '4. Afirmaciones, diseño por contrato y programación defensiva\n'+
+             '5. Control de errores, control de excepciones, y la tolerancia a fallos\n'+
+             '6. Modelos ejecutables\n'+
+             '7. Técnicas de construcción basadas en estados y tablas\n'+
+             '8. Configuración de tiempo de ejecución y la internacionalización\n'+
+             '9. Procesamiento de entrada basada en gramática\n'+
+             '10. Middleware\n'+
+             '11. Métodos de construcción para software distribuido\n'+
+             '12. Construcción de sistemas heterogéneos\n'+
+             '13. Entornos de desarrollo\n'+
+             '14. Constructores GUI\n'+
+             '15. Herramientas de prueba de unidad',['contenido','4'],required_words=['cuarta'])
+    
+    response('Soy Glados , un chatbot de soporte para el curso de Construccion de Software\nEntre la informacion que te puedo brindar esta: \n'+
+             '1. Horario de clases\n'+
+             '2. Silabo del curso\n'+
+             '3. Cantidad de creditos del curso\n'+
+             '4. Fechas de examenes\n'+
+             '5. Tus resultados al final del curso\n'+
+             '6. Proximamente mas funcionalidades',['que','eres','realizas','como','ayudar','ayudarme'],required_words=['eres'])
+             
     best_match = max(highest_prob, key=highest_prob.get)
 
     return unknown() if highest_prob[best_match] < 1 else best_match
