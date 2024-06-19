@@ -15,7 +15,7 @@ class ChatbotInterface:
         self.entry_box = tk.Entry(self.root, textvariable=self.user_input, width=40)
         self.entry_box.pack(padx=10, pady=10, side=tk.LEFT)
 
-        self.send_button = tk.Button(self.root, text="Send", command=self.send_message)
+        self.send_button = tk.Button(self.root, text="Enviar", command=self.send_message)
         self.send_button.pack(padx=10, pady=10, side=tk.RIGHT)
 
         self.root.bind('<Return>', lambda event: self.send_message())
